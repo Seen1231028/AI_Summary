@@ -30,7 +30,7 @@
 
 ### ตัวอย่าง PEAS: Vacuum Cleaner
 
-```bash
+```text
 Vacuum cleaner (PEAS)
 
 # Performance measure
