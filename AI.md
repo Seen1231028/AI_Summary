@@ -245,18 +245,14 @@ Vacuum cleaner (PEAS)
 ## Joint distribution (ตัวอย่าง)
 
 ## Table
-$$
-\begin{array}{|c|c|c|}
-\hline
-Cookies & Semester & P(C,S) \\ \hline
-in-stock & fall & 0.10  \\ 
-in-stock & spring & 0.20  \\ 
-in-stock & summer & 0.30  \\ 
-sold-out & fall & 0.25  \\ 
-sold-out & spring & 0.10  \\ 
-sold-out & summer & 0.05  \\ \hline
-\end{array}
-$$
+| Cookies   | Semester | P(C,S) |
+|-----------|---------|--------|
+| in-stock  | fall    | 0.10   |
+| in-stock  | spring  | 0.20   |
+| in-stock  | summer  | 0.30   |
+| sold-out  | fall    | 0.25   |
+| sold-out  | spring  | 0.10   |
+| sold-out  | summer  | 0.05   |
 
 
 ## Marginalization (Find P(C))
@@ -280,14 +276,10 @@ P(sold-out) &= \frac{P(sold-out,S)}{N} \\
 & = 0.4 \\\\\\
 \end{align*}$$
 
-$$
-\begin{array}{|c|c|}
-\hline
-Cookies & P(C) \\ \hline
-in-stock & 0.6 \\ 
-sold-out & 0.4 \\ \hline
-\end{array}
-$$
+| Cookies   | P(C)  |
+|-----------|-------|
+| in-stock  | 0.6   |
+| sold-out  | 0.4   |
 
 ## Marginalization (Find P(S))
 
@@ -317,15 +309,11 @@ P(summer) &= \frac{P(C,summer)}{N} \\
 & = 0.35 \\\\\\
 \end{align*}$$
 
-$$
-\begin{array}{|c|c|}
-\hline
-Semester & P(S) \\ \hline
-fall & 0.35 \\ 
-spring & 0.3 \\ 
-summer & 0.35 \\ \hline
-\end{array}
-$$
+| Semester | P(S)  |
+|----------|-------|
+| fall     | 0.35  |
+| spring   | 0.3   |
+| summer   | 0.35  |
 
 # find P(sold-out | fall)
 ### วิธีทำ
@@ -402,18 +390,14 @@ P(sold-out,summer) &= \frac{P(sold-out,summer)}{P(summer)} \\\\
 
 ---
 
-$$
-\begin{array}{|c|c|c|c|}
-\hline
-Cookies & Semester & P(C|S) & Normalization \\ \hline
-in-stock & fall & 0.29 & 0.10 \\ 
-in-stock & spring & 0.67 & 0.20 \\ 
-in-stock & summer & 0.86 & 0.30 \\ 
-sold-out & fall & 0.71 & 0.25 \\ 
-sold-out & spring & 0.33 & 0.10 \\ 
-sold-out & summer & 0.14 & 0.05 \\ \hline
-\end{array}
-$$
+| Cookies   | Semester | P(C|S) | Normalization |
+|-----------|---------|--------|---------------|
+| in-stock  | fall    | 0.29   | 0.10          |
+| in-stock  | spring  | 0.67   | 0.20          |
+| in-stock  | summer  | 0.86   | 0.30          |
+| sold-out  | fall    | 0.71   | 0.25          |
+| sold-out  | spring  | 0.33   | 0.10          |
+| sold-out  | summer  | 0.14   | 0.05          |
 
 ---
 ![alt text](./images/Haircut.png)
@@ -428,12 +412,9 @@ $$P(A,B) = P(A \cap B)$$
  ```วิธีทำ```
 ```P(Haircut| Permanent)```
 
-$$\begin{align*}
-P(\text{Haircut} \mid \text{Permanent}) 
-&= \frac{P(Haircut \cap Permanent)}{P(Permanent)} \\
-&= \frac{0.10}{0.15} \\
-& \approx 0.667
-\end{align*}$$
+$$
+P(\text{Haircut} \mid \text{Permanent}) = \frac{P(Haircut \cap Permanent)}{P(Permanent)} = \frac{0.10}{0.15} \approx 0.667
+$$
 ---
 ![alt text](./images/crash.png)
 ---
