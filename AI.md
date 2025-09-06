@@ -418,7 +418,7 @@ $$P(\text{Haircut} \mid \text{Permanent}) = \frac{P(Haircut \cap Permanent)}{P(P
 ![alt text](./images/crash.png)
 ---
 ### Bayes’ Rule
-$$P(a \mid b) = \frac{P(b \mid a)P(a)}{P(b)}$$
+$$P(a \mid b) = \frac{P(b \mid a)\ast P(a)}{P(b)}$$
 ### We know:
 $$P(on-315 \mid crash) = 0.8$$
 $$P(crash) = 0.1 $$
@@ -428,7 +428,7 @@ $$P(crash \mid on-315) = \frac{P(on-315 \mid crash)P(crash)}{P(on-315)}$$
 ### แทนค่า
 $$\begin{align*}
 P(\text{crash} \mid \text{on-315}) 
-&= \frac{P(0.8 * 0.1)}{P(0.7)} \\
+&= \frac{P(0.8) \ast P(0.1)}{P(0.7)} \\
 &= \frac{0.8}{0.7} \\
 & \approx 0.114
 \end{align*}$$
