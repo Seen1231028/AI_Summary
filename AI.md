@@ -397,7 +397,7 @@ P(sold-out,summer) &= \frac{P(sold-out,summer)}{P(summer)} \\\\
 | in-stock  | summer  | 0.86   | 0.30          |
 | sold-out  | fall    | 0.71   | 0.25          |
 | sold-out  | spring  | 0.33   | 0.10          |
-| sold-out  | summer  | 0.14   | 0.05          |
+| sold-out  | summer  | 0.14   | 0.15          |
 
 ---
 ![alt text](./images/Haircut.png)
@@ -412,9 +412,7 @@ $$P(A,B) = P(A \cap B)$$
  ```วิธีทำ```
 ```P(Haircut| Permanent)```
 
-$$
-P(\text{Haircut} \mid \text{Permanent}) = \frac{P(Haircut \cap Permanent)}{P(Permanent)} = \frac{0.10}{0.15} \approx 0.667
-$$
+$$P(\text{Haircut} \mid \text{Permanent}) = \frac{P(Haircut \cap Permanent)}{P(Permanent)} = \frac{0.10}{0.15} \approx 0.667$$
 ---
 ![alt text](./images/crash.png)
 ---
