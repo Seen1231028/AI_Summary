@@ -390,20 +390,21 @@ P(sold-out,summer) &= \frac{P(sold-out,summer)}{P(summer)} \\\\
 
 ---
 
-| Cookies   | Semester | P(C|S) | Normalization |
-|-----------|---------|--------|---------------|
-| in-stock  | fall    | 0.29   | 0.10          |
-| in-stock  | spring  | 0.67   | 0.20          |
-| in-stock  | summer  | 0.86   | 0.30          |
-| sold-out  | fall    | 0.71   | 0.25          |
-| sold-out  | spring  | 0.33   | 0.10          |
-| sold-out  | summer  | 0.14   | 0.15          |
+| Cookies | Semester  | P(C \ S) | Normalization
+|----------|-------|----|----|
+| in-stock     | fall  | 0.29 | 0.10
+| in-stock   | spring   | 0.67 | 0.20
+| in-stock   | summer  | 0.86 | 0.30
+| sold-out   | fall  | 0.71 | 0.25
+| sold-out   | spring  | 0.33 | 0.10
+| sold-out   | summer  | 0.14 | 0.05
 
 ---
 ![alt text](./images/Haircut.png)
 ### **Formula** Conditional Probability
 ```in เซต```
-$$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$ 
+$$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
+--- 
 ```in ความน่าจะเป็น```
 $$P(A \mid B) = \frac{P(A , B)}{P(B)}$$ 
 ---
