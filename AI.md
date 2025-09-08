@@ -241,18 +241,29 @@ Vacuum cleaner (PEAS)
 **การใช้งาน:** เกมส์ (AlphaGo, Atari), หุ่นยนต์, การจัดสรรทรัพยากร
 
 ---
+# Confusion matrix
+| TP | FN |
+|----|----|
+| FP | TN |
+
+$$\begin{align*}
+Accuracy &= \frac{TP \ + \ TN}{TP \ + TN \ + FP \ + FN} \\\\
+Precision &= \frac{TP}{TP \ + \ FP}  \\\\
+Recall &= \frac{TP}{TP + FN} \\\\
+F1 - Score &= 2 \ * \ \frac{Precision \ * \ Recall}{Precision \ + \ Recall} \\
+\end{align*}$$
 
 ## Joint distribution (ตัวอย่าง)
 
 ## Table
 | Cookies   | Semester | P(C,S) |
 |-----------|---------|--------|
-| in-stock  | fall    | 0.10   |
-| in-stock  | spring  | 0.20   |
-| in-stock  | summer  | 0.30   |
-| sold-out  | fall    | 0.25   |
-| sold-out  | spring  | 0.10   |
-| sold-out  | summer  | 0.05   |
+| in\_stock  | fall    | 0.10   |
+| in\_stock  | spring  | 0.20   |
+| in\_stock  | summer  | 0.30   |
+| sold\_out  | fall    | 0.25   |
+| sold\_out  | spring  | 0.10   |
+| sold\_out  | summer  | 0.05   |
 
 
 ## Marginalization (Find P(C))
@@ -263,7 +274,7 @@ $$P(\mathrm{x} = x) = \displaystyle\sum_{y \in \mathrm{Y}} P(x, y)$$
 ### วิธีทำ
 
 $$\begin{align*}
-P(in-stock) &= \frac{P(in-stock,S)}{N} \\
+P(in\_stock) &= \frac{P(in\_stock,S)}{N} \\
 & = \frac{0.1+0.2+0.3}{1}  \\
 & = 0.6
 \end{align*}$$
@@ -271,15 +282,15 @@ P(in-stock) &= \frac{P(in-stock,S)}{N} \\
 ### วิธีทำ
 
 $$\begin{align*}
-P(sold-out) &= \frac{P(sold-out,S)}{N} \\
+P(sold\_out) &= \frac{P(sold\_out,S)}{N} \\
 & = \frac{0.25+0.1+0.15}{1}  \\
 & = 0.4 \\\\\\
 \end{align*}$$
 
 | Cookies   | P(C)  |
 |-----------|-------|
-| in-stock  | 0.6   |
-| sold-out  | 0.4   |
+| in\_stock  | 0.6   |
+| sold\_out  | 0.4   |
 
 ## Marginalization (Find P(S))
 
@@ -315,15 +326,15 @@ P(summer) &= \frac{P(C,summer)}{N} \\
 | spring   | 0.3   |
 | summer   | 0.35  |
 
-# find P(sold-out | fall)
+# find P(sold\_out | fall)
 ### วิธีทำ
 
 $$\begin{align*}
-P(sold-out\  | \   fall) &= \frac{P(sold-out ,  fall)}{P(  fall)} \\\\
+P(sold\_out\  | \   fall) &= \frac{P(sold\_out ,  fall)}{P(  fall)} \\\\
 \end{align*}$$
 
 $$\begin{align*}
-P(sold-out\ | \  fall) &= \frac{P(0.25)}{P(0.35)} \\\\
+P(sold\_out\ | \  fall) &= \frac{P(0.25)}{P(0.35)} \\\\
 &= 0.714 \\\\
 \end{align*}$$
 
@@ -343,7 +354,7 @@ $$P(\mathrm{A} = a|b) = \displaystyle \frac{P(a,b)}{P(b)}$$
 ### 1. find conditional probability ของ P(Cookies | Semester)
 
 $$\begin{align*} \\
-P(in-stock,fall) &= \frac{P(in-stock,fall)}{P(fall)} \\\\
+P(in\_stock,fall) &= \frac{P(in\_stock,fall)}{P(fall)} \\\\
 & = \frac{0.1}{0.35}  \\\\
 & = 0.29 \\\\
 \end{align*}$$
@@ -351,7 +362,7 @@ P(in-stock,fall) &= \frac{P(in-stock,fall)}{P(fall)} \\\\
 ---
 
 $$\begin{align*} \\
-P(in-stock,spring) &= \frac{P(in-stock,spring)}{P(spring)} \\\\
+P(in\_stock,spring) &= \frac{P(in\_stock,spring)}{P(spring)} \\\\
 & = \frac{0.2}{0.3}  \\\\
 & = 0.67 \\\\
 \end{align*}$$
@@ -359,7 +370,7 @@ P(in-stock,spring) &= \frac{P(in-stock,spring)}{P(spring)} \\\\
 ---
 
 $$\begin{align*} \\
-P(in-stock,summer) &= \frac{P(in-stock,summer)}{P(summer)} \\\\
+P(in\_stock,summer) &= \frac{P(in\_stock,summer)}{P(summer)} \\\\
 & = \frac{0.3}{0.35}  \\\\
 & = 0.86 \\\\
 \end{align*}$$
@@ -367,7 +378,7 @@ P(in-stock,summer) &= \frac{P(in-stock,summer)}{P(summer)} \\\\
 ---
 
 $$\begin{align*} \\
-P(sold-out,fall) &= \frac{P(sold-out,fall)}{P(fall)} \\\\
+P(sold\_out,fall) &= \frac{P(sold\_out,fall)}{P(fall)} \\\\
 & = \frac{0.25}{0.35}  \\\\
 & = 0.71 \\\\
 \end{align*}$$
@@ -375,7 +386,7 @@ P(sold-out,fall) &= \frac{P(sold-out,fall)}{P(fall)} \\\\
 ---
 
 $$\begin{align*} \\
-P(sold-out,spring) &= \frac{P(sold-out,spring)}{P(spring)} \\\\
+P(sold\_out,spring) &= \frac{P(sold\_out,spring)}{P(spring)} \\\\
 & = \frac{0.1}{0.3}  \\\\
 & = 0.33 \\\\
 \end{align*}$$
@@ -383,7 +394,7 @@ P(sold-out,spring) &= \frac{P(sold-out,spring)}{P(spring)} \\\\
 ---
 
 $$\begin{align*} \\
-P(sold-out,summer) &= \frac{P(sold-out,summer)}{P(summer)} \\\\
+P(sold\_out,summer) &= \frac{P(sold\_out,summer)}{P(summer)} \\\\
 & = \frac{0.05}{0.35}  \\\\
 & = 0.14 \\\\
 \end{align*}$$
@@ -392,12 +403,12 @@ P(sold-out,summer) &= \frac{P(sold-out,summer)}{P(summer)} \\\\
 
 | Cookies | Semester  | P(C \ S)
 |----------|-------|----|
-| in-stock     | fall  | 0.29 
-| in-stock   | spring   | 0.67 
-| in-stock   | summer  | 0.86 
-| sold-out   | fall  | 0.71 
-| sold-out   | spring  | 0.33 
-| sold-out   | summer  | 0.14 
+| in\_stock     | fall  | 0.29 
+| in\_stock   | spring   | 0.67 
+| in\_stock   | summer  | 0.86 
+| sold\_out   | fall  | 0.71 
+| sold\_out   | spring  | 0.33 
+| sold\_out   | summer  | 0.14 
 
 ---
 ![alt text](./images/Haircut.png)
@@ -418,16 +429,16 @@ $$P(\text{Haircut} \mid \text{Permanent}) = \frac{P(Haircut \cap Permanent)}{P(P
 ![alt text](./images/crash.png)
 ---
 ### Bayes’ Rule
-$$P(a \mid b) = \frac{P(b \mid a)\ast P(a)}{P(b)}$$
+$$P(a \mid b) = \frac{P(b \mid a)\ast aaP(a)}{P(b)}$$
 ### We know:
-$$P(on-315 \mid crash) = 0.8$$
+$$P(on\_315 \mid crash) = 0.8$$
 $$P(crash) = 0.1 $$
-$$P(on-315) = 0.7$$
+$$P(on\_315) = 0.7$$
 ### วิธีทำ
-$$P(crash \mid on-315) = \frac{P(on-315 \mid crash)P(crash)}{P(on-315)}$$
+$$P(crash \mid on\_315) = \frac{P(on\_315 \mid crash)P(crash)}{P(on\_315)}$$
 ### แทนค่า
 $$\begin{align*}
-P(\text{crash} \mid \text{on-315}) 
+P(\text{crash} \mid \text{on\_315}) 
 &= \frac{P(0.8) \ast P(0.1)}{P(0.7)} \\
 &= \frac{0.8}{0.7} \\
 & \approx 0.114
